@@ -28,7 +28,16 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddControllers()
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<EmployeeDtoValidator>());
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()    // allow requests from any origin
+            .AllowAnyMethod()    // allow GET, POST, PUT, DELETE, etc.
+            .AllowAnyHeader();   // allow any headers
+    });
+});
 
 var app = builder.Build();
 
@@ -41,7 +50,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowReact");
+app.UseCors("AllowAll");
 
 app.UseMiddleware<ExceptionMiddleware>();
 

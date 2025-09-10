@@ -14,6 +14,7 @@ namespace EmployeeManagement.Services
             var employees = await _repo.GetAllAsync();
             return employees.Select(e => new EmployeeDto
             {
+                EmployeeId = e.EmployeeId, 
                 FirstName = e.FirstName,
                 LastName = e.LastName,
                 Email = e.Email,
@@ -28,6 +29,7 @@ namespace EmployeeManagement.Services
             if (employee == null) return null;
             return new EmployeeDto
             {
+                EmployeeId = employee.EmployeeId,
                 FirstName = employee.FirstName,
                 LastName = employee.LastName,
                 Email = employee.Email,
