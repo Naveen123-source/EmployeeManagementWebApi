@@ -1,0 +1,14 @@
+# Visual Studio temporary files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.pdb
+
+# EF Core Migrations (optional)
+Migrations/
+
+# Secrets
+appsettings.Development.json
