@@ -20,7 +20,6 @@
 ## Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download)
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Node.js (LTS)](https://nodejs.org/)
 
 ---
 
@@ -28,5 +27,6 @@
 
 ### 1. Clone the repository
 ```sh
-git clone https://github.com/<your-username>/EmployeeManagement.git
+git clone https://github.com/Naveen123-source/EmployeeManagementWebApi.git
 cd EmployeeManagement
+
